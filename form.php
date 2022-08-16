@@ -92,8 +92,8 @@
                         <input type="text" class="form-control" id="tempatKejadian" placeholder="Masukkan Instansi Tujuan">
                      </div>
                   </div>
-                  <div class="d-grid gap-2 mb-2">
-                     <button class="btn btn-success" type="button">Masuk</button>
+                  <div class="d-grid gap-2 mb-2 pb-5">
+                     <button class="btn btn-danger" type="button">LAPOR !</button>
                   </div>
                </div>
             </div>
