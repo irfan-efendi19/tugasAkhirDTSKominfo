@@ -103,6 +103,7 @@
     <!-- TOTALAN -->
     <section id="counter" class="sec-padding">
 		<div class="container">
+            <h2 class="pb-3 fw-bold">STATISTIK SAAT INI</h2>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="count"> <span class="fa fa-smile-o"></span>
@@ -151,8 +152,6 @@
                      <button class="btn btn-danger" name="save" type="submit">KIRIM</button>
                   </div>
                   </div>
-                  
-
                </div>
             </div>
          </div>

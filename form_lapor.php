@@ -39,7 +39,7 @@ if($_SESSION['userweb'] == ''){
          </div>
       </nav>
       <div class="container-fluid ">
-         <div class="container text-center my-5">
+         <div class="container text-center ">
             <h1>LAYANAN PENGADUAN MASYARAKAT</h1>
             <p>Ikuti cara-cara pendaftaran dengan baik dan benar.</p>
          </div>
