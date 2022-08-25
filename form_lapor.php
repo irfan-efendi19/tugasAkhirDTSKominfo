@@ -14,6 +14,7 @@ if($_SESSION['userweb'] == ''){
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="navbar-hide.css">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
       <title>LAYANAN PENGADUAN MASYARAKAT</title>
    </head>
@@ -30,10 +31,6 @@ if($_SESSION['userweb'] == ''){
                   <li class="nav-item">
                      <a class="nav-link" aria-current="page" href="index.php">Beranda</a>
                   <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Tutorial</a>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Tentang Kami</a>
-                  <li class="nav-item">
                      <a class="nav-link" aria-current="page" href="#">Hi, <?=$_SESSION['userweb']?></a>
                   <li class="nav-item">
                      <a class="nav-link" aria-current="page" href="logout.php">Logout</a>
@@ -41,8 +38,8 @@ if($_SESSION['userweb'] == ''){
             </div>
          </div>
       </nav>
-      <div class="container-fluid">
-         <div class="container text-center">
+      <div class="container-fluid ">
+         <div class="container text-center my-5">
             <h1>LAYANAN PENGADUAN MASYARAKAT</h1>
             <p>Ikuti cara-cara pendaftaran dengan baik dan benar.</p>
          </div>

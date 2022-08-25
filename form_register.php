@@ -12,6 +12,7 @@ include "./config/connection.php";
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
       <title>LAYANAN PENGADUAN MASYARAKAT</title>
       <link rel="icon" href="asset/logo-home-round.ico" type="image/ico">
+      <link rel="stylesheet" href="navbar-hide.css">
    </head>
    <body>
       <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded ">
@@ -24,21 +25,18 @@ include "./config/connection.php";
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                <ul class="navbar-nav">
                   <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="index.php">Beranda</a>
+                     <a class="nav-link" aria-current="page" href="#"></a>
                   <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Tutorial</a>
+                     <a class="nav-link" aria-current="page" href="#"></a>
                   <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Tentang Kami</a>
+                     <a class="nav-link" aria-current="page" href="#"></a>
                </ul>
             </div>
          </div>
-      </nav>
+      </nav> 
+      
       <div class="container-fluid">
-         <div class="container text-center">
-         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+         <div class="container text-center ">
             <h1>LAYANAN PENGADUAN MASYARAKAT</h1>
             <p>Ikuti cara-cara pendaftaran dengan baik dan benar.</p>
          </div>

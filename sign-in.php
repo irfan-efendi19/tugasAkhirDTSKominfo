@@ -12,32 +12,35 @@ include "./config/connection.php";
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="navbar-hide.css">
    <title>LAYANAN PENGADUAN MASYARAKAT</title>
 </head>
 
 <body>
    
-   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="#">
-            <a class="navbar-brand fw-bold text-dark f-" href="index.php">LAYANAN PENGADUAN MASYARAKAT</a>
+<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded ">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <a class="navbar-brand fw-bold text-dark " href="index.php" >LAYANAN PENGADUAN MASYARAKAT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                <ul class="navbar-nav">
                   <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Beranda</a>
+                     <a class="nav-link" aria-current="page" href="#"></a>
                   <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Tutorial</a>
+                     <a class="nav-link" aria-current="page" href="#"></a>
                   <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Tentang Kami</a>
+                     <a class="nav-link" aria-current="page" href="#"></a>
                </ul>
             </div>
-      </div>
-   </nav>
-   <div class="container col-lg-5">
-   <img src="asset/logo-home-round.png" alt="" class="imglogo position-relative top-0 start-50 translate-middle w-25">
+         </div>
+      </nav> 
+
+
+   <div class="container col-lg-5 mt-5">
+   <img src="asset/logo-home-round.png" alt="" class="imglogo position-relative top-0 start-50 translate-middle w-25 mt-5">
    <h1 class="text-center mb-5">Masuk Akun Anda</h1>
       <form action="" method="POST">
          <div class="mb-3 ">
