@@ -1,0 +1,220 @@
+/* HERO */
+.hero{
+    background: #00467F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    width: 100%;
+} 
+
+
+
+.judulhero h1{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 72px;
+}
+
+.judulhero p{
+    width: 75;
+}
+
+@media only screen and (max-width: 600px) {
+    .imglogo {
+      width: 0%;
+      height: 0%;
+    }
+  }
+
+
+/* TIMELINE CSS */ 
+
+ .timeline{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 500px;
+    background-color: white;
+ }
+
+ .timeline-steps {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap
+ }
+ 
+ .timeline-steps .timeline-step {
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     margin: 1rem
+ }
+ 
+ @media (min-width:768px) {
+     .timeline-steps .timeline-step:not(:last-child):after {
+         content: "";
+         display: block;
+         border-top: .25rem dotted #d63031;
+         width: 3.46rem;
+         position: absolute;
+         left: 7.5rem;
+         top: .3125rem
+     }
+     .timeline-steps .timeline-step:not(:first-child):before {
+         content: "";
+         display: block;
+         border-top: .25rem dotted #d63031;
+         width: 3.8125rem;
+         position: absolute;
+         right: 7.5rem;
+         top: .3125rem
+     }
+ }
+ 
+ .timeline-steps .timeline-content {
+     width: 10rem;
+     text-align: center
+ }
+ 
+ .timeline-steps .timeline-content .inner-circle {
+     border-radius: 1.5rem;
+     height: 1rem;
+     width: 1rem;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #d63031
+ }
+ 
+ .timeline-steps .timeline-content .inner-circle:before {
+     content: "";
+     background-color: #d63031;
+     display: inline-block;
+     height: 3rem;
+     width: 3rem;
+     min-width: 3rem;
+     border-radius: 6.25rem;
+     opacity: .5
+ }
+ /* TIMELINE CSS */ 
+
+/*  Counter Section  */
+
+#counter {    
+    background-color: #d63031;
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    padding: 100px 0;
+}
+#counter .count {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-align: center;
+}
+.count h4 {
+    color: #fff;
+	font-size: 16px;
+	margin-top: 0;
+}
+#counter .count .fa {
+    font-size: 40px;
+    display: block;
+    color: #fff;
+}
+#counter .number {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+/*  Pricing Section  */
+
+#pricing {
+    background: #f7f7f7;
+}
+.pricing-items {
+    padding-top: 50px;
+}
+.pricing-item {
+    background: #fff;
+    box-shadow: 0 0 9px 0 rgba(130, 121, 121, .2);
+    padding: 50px 0px;
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+}
+.pricing-item.active {
+    top: -50px;
+}
+.price-list li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.price-list .price {
+    font-size: 30px;
+    font-weight: bold;
+}
+.pricing-item .ribbon {
+    margin: -50px 0 20px;
+    display: block;
+    background-color: #ffb400;
+    padding: 15px 0 2px;
+    opacity: 0.8;
+    border-top-right-radius: 2em;
+}
+.pricing-item:hover .ribbon {
+    background-color: #ffb400;
+	opacity: 1;
+}
+.pricing-item.active .ribbon {
+    background-color: #ffb400;
+	opacity: 1;
+}
+.pricing-item .ribbon p {
+    color: #fff;
+    font-size: 22px;
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+.pricing-item.active .price-list li, .pricing-item:hover .price-list li {
+    color: #848181;;
+}
+ul.price-list {
+    margin-bottom: 30px;
+    padding: 0;
+}
+.btn-price {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 14px 40px;
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    -o-border-radius: 26px;
+    border-radius: 26px;
+    border: 1px solid #848181;
+    background-color: transparent;
+    color: #848181;
+}
+.pricing-item:hover .btn-price,
+.active .btn-price {
+    border: 1px solid #ffb400;
+    background-color: #ffb400;
+    color: #fff;
+}
+.btn-price:focus {
+    background-color: transparent;
+    text-decoration: none;
+}
+@media only screen and (max-width: 767px) {
+    .pricing-items {
+        padding-top: 0;
+    }
+    .pricing-item.active {
+        top: 20px;
+        margin-bottom: 40px;
+    }
+}
