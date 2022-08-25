@@ -56,7 +56,8 @@ include "./config/connection.php";
                       <thead>
                         <tr>
                           <th>Nama</th>
-                          <th>ID</th>
+                          <th>Judul Laporan</th>
+                          <th>Isi Laporan</th>
                           <th>Waktu Laporan</th>
                           <th>Status</th>
                         </tr>
@@ -64,6 +65,7 @@ include "./config/connection.php";
                       <tbody>
                         <tr>
                           <td>Kelompok 20</td>
+                          <td>xxxx</td>
                           <td>xxxx</td>
                           <td>xxxx</td>
                           <td><label class="badge bg-danger">Menunggu</label></td>
