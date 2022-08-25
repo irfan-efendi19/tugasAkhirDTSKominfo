@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Agu 2022 pada 06.31
--- Versi server: 10.1.37-MariaDB
--- Versi PHP: 7.3.0
+-- Waktu pembuatan: 25 Agu 2022 pada 19.29
+-- Versi server: 10.1.38-MariaDB
+-- Versi PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -48,12 +48,20 @@ CREATE TABLE `tb_laporan` (
   `id_detail_user` int(11) NOT NULL,
   `judul_laporan` varchar(100) NOT NULL,
   `deskripsi` text NOT NULL,
-  `tempat` varchar(70) NOT NULL,
   `tanggal_kejadian` date NOT NULL,
   `lokasi_kejadian` text NOT NULL,
   `instansi_tujuan` text NOT NULL,
-  `file` varchar(100) DEFAULT NULL
+  `file` varchar(100) DEFAULT NULL,
+  `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_laporan`
+--
+
+INSERT INTO `tb_laporan` (`id_laporan`, `id_detail_user`, `judul_laporan`, `deskripsi`, `tanggal_kejadian`, `lokasi_kejadian`, `instansi_tujuan`, `file`, `status`) VALUES
+(1, 0, 'Banjir', 'Ada Banjir Besar', '2022-08-25', 'Disana', 'Dinas', '', 'Ditangani'),
+(2, 0, 'Demo', 'Demo besar-besaran', '2022-08-25', 'darmo', 'Dinas', '', 'Sudah Selesai');
 
 -- --------------------------------------------------------
 
@@ -98,8 +106,7 @@ ALTER TABLE `tb_detail_user`
 -- Indeks untuk tabel `tb_laporan`
 --
 ALTER TABLE `tb_laporan`
-  ADD PRIMARY KEY (`id_laporan`),
-  ADD KEY `id_detail_user` (`id_detail_user`);
+  ADD PRIMARY KEY (`id_laporan`);
 
 --
 -- Indeks untuk tabel `tb_user`
@@ -121,7 +128,7 @@ ALTER TABLE `tb_detail_user`
 -- AUTO_INCREMENT untuk tabel `tb_laporan`
 --
 ALTER TABLE `tb_laporan`
-  MODIFY `id_laporan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_laporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_user`
@@ -138,12 +145,6 @@ ALTER TABLE `tb_user`
 --
 ALTER TABLE `tb_detail_user`
   ADD CONSTRAINT `tb_detail_user_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Ketidakleluasaan untuk tabel `tb_laporan`
---
-ALTER TABLE `tb_laporan`
-  ADD CONSTRAINT `tb_laporan_ibfk_1` FOREIGN KEY (`id_detail_user`) REFERENCES `tb_detail_user` (`id_detail_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
