@@ -53,7 +53,7 @@ include "./config/connection.php";
          </div>
          <div>
             <button class="btn btn-success" type="submit" name="fmasuk">Masuk</button>
-            <span>Belum Memiliki Akun? </span> <a style="text-decoration: none" href="register.php">Daftar</a>
+            <span>Belum Memiliki Akun? </span> <a style="text-decoration: none" href="form_register.php">Daftar</a>
          </div>
       </form>
       <?php
@@ -69,7 +69,10 @@ include "./config/connection.php";
                header("location:form_lapor.php");
                exit;
             } else {
-               echo "Maaf username dan password salah";
+               echo '<div class="mt-2 alert alert-danger  alert-dismissible fade show" role="alert">
+               <strong>User Name dan Password Salah</strong> Teliti kembali!
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+             </div>';
             }
          } catch (\Throwable $th) {
             echo $th;

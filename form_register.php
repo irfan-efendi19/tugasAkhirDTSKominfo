@@ -101,7 +101,10 @@ include "./config/connection.php";
                   $koneksi->query("INSERT INTO tb_user VALUES (NULL, '$username', '$email', '$password', '$nik', '$namaLengkap', '$alamat', '$noTelp', NULL, NOW(), NOW())");
                   echo "<script>alert('Data Berhasil ditambahkan')</script>";
                } catch (\Throwable $th) {
-                  echo "<script>alert('Data gagal ditambahkan')</script>";
+                  echo '<div class="mt-2 alert alert-danger  alert-dismissible fade show" role="alert">
+               <strong>Gagal Ditambahkan</strong> Cek kembali data anda!
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+               </div>';
                }
             }
          
