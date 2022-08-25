@@ -20,7 +20,7 @@ if($_SESSION['userweb'] == ''){
    <body>
       <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded ">
          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
             <a class="navbar-brand fw-bold text-dark " href="#" >LAYANAN PENGADUAN MASYARAKAT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@ if($_SESSION['userweb'] == ''){
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                <ul class="navbar-nav">
                   <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Beranda</a>
+                     <a class="nav-link" aria-current="page" href="index.php">Beranda</a>
                   <li class="nav-item">
                      <a class="nav-link" aria-current="page" href="#">Tutorial</a>
                   <li class="nav-item">

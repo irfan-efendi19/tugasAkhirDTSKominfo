@@ -28,6 +28,14 @@ include "./config/connection.php";
                      <a class="nav-link" aria-current="page" href="#">Tutorial</a>
                   <li class="nav-item">
                      <a class="nav-link" aria-current="page" href="#">Tentang Kami</a>
+                     <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Menu </a>
+                      <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Lapor</a></li>
+                      <li><a class="dropdown-item" href="#">Monitoring</a></li>
+                      <li><a class="dropdown-item" href="#">Keluar</a></li>
+                    </ul>
+                  </li>
                </ul>
             </div>
          </div>

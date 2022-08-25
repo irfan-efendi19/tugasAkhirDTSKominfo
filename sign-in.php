@@ -50,6 +50,7 @@ include "./config/connection.php";
          </div>
          <div>
             <button class="btn btn-success" type="submit" name="fmasuk">Masuk</button>
+            <span>Belum Memiliki Akun? </span> <a style="text-decoration: none" href="register.php">Daftar</a>
          </div>
       </form>
       <?php

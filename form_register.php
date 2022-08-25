@@ -17,7 +17,7 @@ include "./config/connection.php";
       <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded ">
          <div class="container-fluid">
             <a class="navbar-brand" href="#">
-            <a class="navbar-brand fw-bold text-dark " href="#" >LAYANAN PENGADUAN MASYARAKAT</a>
+            <a class="navbar-brand fw-bold text-dark " href="index.php" >LAYANAN PENGADUAN MASYARAKAT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,6 +35,10 @@ include "./config/connection.php";
       </nav>
       <div class="container-fluid">
          <div class="container text-center">
+         <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
             <h1>LAYANAN PENGADUAN MASYARAKAT</h1>
             <p>Ikuti cara-cara pendaftaran dengan baik dan benar.</p>
          </div>

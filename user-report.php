@@ -1,6 +1,11 @@
 <?php
 include "./config/connection.php";
-
+// Start the session
+session_start();
+if($_SESSION['userweb'] == ''){
+   header("location:form_register.php");
+   exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,10 +20,10 @@ include "./config/connection.php";
       <link rel="icon" href="asset/logo-home-round.ico" type="image/ico">
    </head>
    <body>
-      <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded ">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded">
          <div class="container-fluid">
             <a class="navbar-brand" href="#">
-            <a class="navbar-brand fw-bold text-dark " href="#" >LAYANAN PENGADUAN MASYARAKAT</a>
+            <a class="navbar-brand fw-bold text-dark f-" href="index.php" >LAYANAN PENGADUAN MASYARAKAT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,6 +35,14 @@ include "./config/connection.php";
                      <a class="nav-link" aria-current="page" href="#">Tutorial</a>
                   <li class="nav-item">
                      <a class="nav-link" aria-current="page" href="#">Tentang Kami</a>
+                     <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Halo, <?=$_SESSION['userweb']?> </a>
+                      <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Lapor</a></li>
+                      <li><a class="dropdown-item" href="#">Monitoring</a></li>
+                      <li><a class="dropdown-item" href="#">Keluar</a></li>
+                    </ul>
+                  </li>
                </ul>
             </div>
          </div>
@@ -38,13 +51,12 @@ include "./config/connection.php";
         <div class="container">
           <div class="text-center">
           <h2>TERIMA KASIH SUDAH MEMBUAT LAPORAN</h2>
-          <p>Laporan Anda Sedang Di Proses</p>
+          
         </div>
         <div class="page-content page-container" id="page-content">
-    <div class="padding">
         <div class="row container d-flex justify-content-center">
 
-<div class="col-lg-8 grid-margin stretch-card">
+			<div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title">List Laporan</h3>
@@ -63,24 +75,38 @@ include "./config/connection.php";
                         </tr>
                       </thead>
                       <tbody>
+						<?php
+						
+						$sql = "SELECT * FROM tb_laporan";
+						$result = $koneksi->query($sql);
+
+						if ($result->num_rows > 0) {
+						  // output data of each row
+						  while($row = $result->fetch_assoc()) {
+						?> 
                         <tr>
-                          <td>Kelompok 20</td>
-                          <td>xxxx</td>
-                          <td>xxxx</td>
-                          <td>xxxx</td>
-                          <td><label class="badge bg-danger">Menunggu</label></td>
+                          <td><?=$row['id_laporan']?></td>
+                          <td><?=$row['judul_laporan']?></td>
+                          <td><?=$row['deskripsi']?></td>
+                          <td><?=$row['tanggal_kejadian']?></td>
+                          <td><label class="badge bg-danger"><?=$row['status']?></label></td>
                         </tr>
+						<?php
+						}
+						} else {
+						  echo "0 results";
+						}
+						$koneksi->close();
+						?>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
             </div>
-            
             </div>
               </div>
             </div>
-        </div>
       </div>
       <!-- Footer -->
       <!-- <footer class="text-center text-lg-start bg-light text-muted">
