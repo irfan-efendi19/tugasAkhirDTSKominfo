@@ -38,13 +38,12 @@ include "./config/connection.php";
         <div class="container">
           <div class="text-center">
           <h2>TERIMA KASIH SUDAH MEMBUAT LAPORAN</h2>
-          <p>Laporan Anda Sedang Di Proses</p>
+          
         </div>
         <div class="page-content page-container" id="page-content">
-    <div class="padding">
         <div class="row container d-flex justify-content-center">
 
-<div class="col-lg-8 grid-margin stretch-card">
+			<div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title">List Laporan</h3>
@@ -63,24 +62,38 @@ include "./config/connection.php";
                         </tr>
                       </thead>
                       <tbody>
+						<?php
+						
+						$sql = "SELECT * FROM tb_laporan";
+						$result = $koneksi->query($sql);
+
+						if ($result->num_rows > 0) {
+						  // output data of each row
+						  while($row = $result->fetch_assoc()) {
+						?> 
                         <tr>
-                          <td>Kelompok 20</td>
-                          <td>xxxx</td>
-                          <td>xxxx</td>
-                          <td>xxxx</td>
-                          <td><label class="badge bg-danger">Menunggu</label></td>
+                          <td><?=$row['id_laporan']?></td>
+                          <td><?=$row['judul_laporan']?></td>
+                          <td><?=$row['deskripsi']?></td>
+                          <td><?=$row['tanggal_kejadian']?></td>
+                          <td><label class="badge bg-danger"><?=$row['status']?></label></td>
                         </tr>
+						<?php
+						}
+						} else {
+						  echo "0 results";
+						}
+						$koneksi->close();
+						?>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
             </div>
-            
             </div>
               </div>
             </div>
-        </div>
       </div>
       <!-- Footer -->
       <!-- <footer class="text-center text-lg-start bg-light text-muted">
