@@ -46,22 +46,22 @@
                     <a class="btn btn-warning" href="sign-in.php">MASUK</a>
                     </div>
                 </div>
-                <img src="asset/logo-home.png" alt="" class="imglogo position-absolute top-50 end-0 translate-middle w-25">
+                <img src="asset/logo-home-round.png" alt="" class="imglogo position-absolute top-50 end-0 translate-middle w-25">
             </div>
         </div>
     </div>
     <!-- HERO -->
     
     <!-- TIMELINE -->
-    <div class="timeline my-5" id="timeline">
-    <div class="container my-5 h-100">                      
-    <div class="row text-center justify-content-center mb-5">
-        <div class="col-xl-6 col-lg-8 pt-9">
+    <div class="timeline" id="timeline">
+    <div class="container pt-5">                      
+    <div class="row text-center justify-content-center">
+        <div class="col-xl-6 col-lg-8 my-5">
             <h2 class="font-weight-bold">ALUR SISTEM PELAPORAN</h2>
             <p class="text-muted">Buat Laporan Dengan Baik Dan Jujur</p>
         </div>
     </div>
-    <div class="row pt-9" >
+    <div class="row mt-5" >
         <div class="col">
             <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
                 <div class="timeline-step">
@@ -103,7 +103,7 @@
     <!-- TOTALAN -->
     <section id="counter" class="sec-padding">
 		<div class="container">
-            <h2 class="pb-3 fw-bold">STATISTIK SAAT INI</h2>
+            <h2>STATISTIK SAAT INI</h2>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="count"> <span class="fa fa-smile-o"></span>
@@ -152,6 +152,8 @@
                      <button class="btn btn-danger" name="save" type="submit">KIRIM</button>
                   </div>
                   </div>
+                  
+
                </div>
             </div>
          </div>

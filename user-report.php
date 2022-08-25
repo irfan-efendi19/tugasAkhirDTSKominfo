@@ -30,12 +30,6 @@ if($_SESSION['userweb'] == ''){
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                <ul class="navbar-nav">
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="index.php">Beranda</a>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Tutorial</a>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Tentang Kami</a>
                      <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Halo, <?=$_SESSION['userweb']?> </a>
                       <ul class="dropdown-menu">
@@ -49,12 +43,12 @@ if($_SESSION['userweb'] == ''){
          </div>
       </nav>
       <div>
-        <div class="container">
+        <div class="container my-5">
           <div class="text-center">
           <h2>TERIMA KASIH SUDAH MEMBUAT LAPORAN</h2>
           
         </div>
-        <div class="page-content page-container" id="page-content">
+        <div class="page-content page-container mt-4" id="page-content">
         <div class="row container d-flex justify-content-center">
 
 			<div class="col-lg-12 grid-margin stretch-card">

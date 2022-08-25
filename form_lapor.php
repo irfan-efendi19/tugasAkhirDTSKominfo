@@ -22,7 +22,7 @@ if($_SESSION['userweb'] == ''){
       <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light shadow-lg p-3 mb-5 bg-body rounded ">
          <div class="container-fluid">
             <a class="navbar-brand" href="index.php">
-            <a class="navbar-brand fw-bold text-dark " href="#" >LAYANAN PENGADUAN MASYARAKAT</a>
+            <a class="navbar-brand fw-bold text-dark " href="index.php" >LAYANAN PENGADUAN MASYARAKAT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -112,13 +112,13 @@ if($_SESSION['userweb'] == ''){
          ?>
       </div>
       </div>
-      <!-- Footer -->
-      <footer class="text-center text-lg-start bg-light text-muted">
-         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2022 HAK CIPTA:
-            <p class="text-center">KELOMPOK 20 JWD ITS 2022</p>
-         </div>
-      </footer>
-      <!-- Footer -->
+
+      
+    <!--FOOTER -->
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Kelompok 20 JWD ITS KOMINFO 2022</small>
+    </div>
+  </footer>
    </body>
 </html>
