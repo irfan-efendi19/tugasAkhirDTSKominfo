@@ -28,12 +28,6 @@ if($_SESSION['userweb'] == ''){
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                <ul class="navbar-nav">
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="index.php">Beranda</a>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Tutorial</a>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Tentang Kami</a>
                      <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Halo, <?=$_SESSION['userweb']?> </a>
                       <ul class="dropdown-menu">
