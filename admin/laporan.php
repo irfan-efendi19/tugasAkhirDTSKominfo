@@ -51,8 +51,8 @@
                                             <td class="text-center"><?= $d['created_at'] ?></td>
                                             <td><?= $d['status'] ?></td>
                                             <td>
-                                                <a href="" class="btn btn-warning btn-sm">Konfirmasi</a>
-                                                <a href="" class="btn btn-danger btn-sm">Selesai</a>
+                                                <a href="konfirmasi.php?id=<?=$d['id_laporan']?>" class="btn btn-warning btn-sm">Konfirmasi</a>
+                                                <a href="selesai.php?id=<?=$d['id_laporan']?>" class="btn btn-danger btn-sm">Selesai</a>
                                             </td>
                                         </tr>
                                         <?php endwhile ?>
