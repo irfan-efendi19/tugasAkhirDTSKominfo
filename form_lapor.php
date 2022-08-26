@@ -97,12 +97,12 @@ if($_SESSION['userweb'] == ''){
                      $id_user = mysqli_real_escape_string($koneksi, $_SESSION['userweb']);
                      $judul = mysqli_real_escape_string($koneksi, $_POST['judul']);
                      $laporan = mysqli_real_escape_string($koneksi, $_POST['laporan']);
-                     // $tanggal = mysqli_real_escape_string($koneksi, $_POST['tanggal']);
+                     $tanggal = mysqli_real_escape_string($koneksi, $_POST['tanggal']);
                      // $lokasi = mysqli_real_escape_string($koneksi, $_POST['lokasi']);
                      $instansi = mysqli_real_escape_string($koneksi, $_POST['instansi']);
                      //$berkas = mysqli_real_escape_string($koneksi, $_POST['berkas']);
                      try {
-                        $koneksi->query("INSERT INTO tb_laporan VALUES (NULL, '$id_user', '$judul', '$laporan', '$instansi', '', NULL)");
+                        $koneksi->query("INSERT INTO tb_laporan VALUES (NULL, '$id_user', '$judul', '$laporan','$tanggal', '$instansi', '', NULL)");
                         echo "<script>alert('Laporan ditambahkan')</script>";
                      } catch (\Throwable $th) {
                         echo "<script>alert('Laporan ditambahkan')</script>";
