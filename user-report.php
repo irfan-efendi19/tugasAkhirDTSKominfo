@@ -33,9 +33,9 @@ if($_SESSION['userweb'] == ''){
                      <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Halo, <?=$_SESSION['userweb']?> </a>
                       <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Lapor</a></li>
-                      <li><a class="dropdown-item" href="#">Monitoring</a></li>
-                      <li><a class="dropdown-item" href="#">Keluar</a></li>
+                      <li><a class="dropdown-item" href="form_lapor.php">Lapor</a></li>
+                      <li><a class="dropdown-item" href="user-report.php">Monitoring</a></li>
+                      <li><a class="dropdown-item" href="logout.php">Keluar</a></li>
                     </ul>
                   </li>
                </ul>
@@ -72,7 +72,10 @@ if($_SESSION['userweb'] == ''){
                       <tbody>
 						<?php
 						
-						$sql = "SELECT * FROM tb_laporan";
+						$sql = "SELECT * FROM tb_laporan
+                    join tb_user
+                    on tb_laporan.id_detail_user = tb_user.id_user 
+                    where tb_user.username = '".$_SESSION['userweb']."'";
 						$result = $koneksi->query($sql);
 
 						if ($result->num_rows > 0) {

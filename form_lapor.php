@@ -3,7 +3,7 @@ include "./config/connection.php";
 // Start the session
 session_start();
 if($_SESSION['userweb'] == ''){
-   header("location:form_register.php");
+   header("location:sign-in.php");
    exit;
 }
 ?>
@@ -31,9 +31,9 @@ if($_SESSION['userweb'] == ''){
                      <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Halo, <?=$_SESSION['userweb']?> </a>
                       <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Lapor</a></li>
-                      <li><a class="dropdown-item" href="#">Monitoring</a></li>
-                      <li><a class="dropdown-item" href="#">Keluar</a></li>
+                      <li><a class="dropdown-item" href="form_lapor.php">Lapor</a></li>
+                      <li><a class="dropdown-item" href="user-report.php">Monitoring</a></li>
+                      <li><a class="dropdown-item" href="logout.php">Keluar</a></li>
                     </ul>
                   </li>
                </ul>
@@ -86,23 +86,35 @@ if($_SESSION['userweb'] == ''){
          </div>
          </form>
          <?php
-         // echo $_POST['judul'];
+						
+         $sql = "SELECT * FROM tb_user where username = '".$_SESSION['userweb']."'";
+         $result = $koneksi->query($sql);
+
+         if ($result->num_rows > 0) {
+           // output data of each row
+           while($row = $result->fetch_assoc()) {
+           $id_user = $row['id_user'];
+
+            }  
+         }
+         //echo $id_user;
          // echo $_POST['laporan'];
          // echo $_POST['tanggal'];
          // echo $_POST['tanggal'];
          // echo $_POST['lokasi'];
          // echo $_POST['instansi'];
+         //echo $_SESSION['userweb'];
 
                   if(isset($_POST['save'])) {
-                     $id_user = mysqli_real_escape_string($koneksi, $_SESSION['userweb']);
+                     //$id_user = mysqli_real_escape_string($koneksi, $_SESSION['userweb']);
                      $judul = mysqli_real_escape_string($koneksi, $_POST['judul']);
                      $laporan = mysqli_real_escape_string($koneksi, $_POST['laporan']);
-                     // $tanggal = mysqli_real_escape_string($koneksi, $_POST['tanggal']);
-                     // $lokasi = mysqli_real_escape_string($koneksi, $_POST['lokasi']);
+                     $tanggal = mysqli_real_escape_string($koneksi, $_POST['tanggal']);
+                     $lokasi = mysqli_real_escape_string($koneksi, $_POST['lokasi']);
                      $instansi = mysqli_real_escape_string($koneksi, $_POST['instansi']);
                      //$berkas = mysqli_real_escape_string($koneksi, $_POST['berkas']);
                      try {
-                        $koneksi->query("INSERT INTO tb_laporan VALUES (NULL, '$id_user', '$judul', '$laporan', '$instansi', '', NULL)");
+                        $koneksi->query("INSERT INTO tb_laporan VALUES (NULL, '$id_user', '$judul', '$laporan', '$tanggal', '$lokasi', '$instansi', '', 'Terkirim')");
                         echo "<script>alert('Laporan ditambahkan')</script>";
                      } catch (\Throwable $th) {
                         echo "<script>alert('Laporan ditambahkan')</script>";
